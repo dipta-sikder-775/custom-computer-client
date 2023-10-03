@@ -35,6 +35,7 @@ const ProductDetails = ({ data }) => {
           <h1 className="mt-2">Name: {productName}</h1>
           <h1 className="mt-2">Category: {category}</h1>
           <h1 className="mt-2">Price: $ {price}</h1>
+
           <h1 className="mt-2">
             Status:{" "}
             <span
@@ -45,17 +46,22 @@ const ProductDetails = ({ data }) => {
               {status}
             </span>
           </h1>
+
           <h1 className="mt-2">Rating: {rating}</h1>
           <h1 className="mt-2">Indivisual Rating: {indivisualRating}</h1>
         </div>
+
         <div className="font-semibold mt-3">
           <h1 className="mt-2">Brand: {keyFeatures?.brand}</h1>
           <h1 className="mt-2">Model: {keyFeatures?.model}</h1>
           <h1 className="mt-2">Specification: {keyFeatures.specification}</h1>
+
           {keyFeatures?.sockettype && (
             <h1 className="mt-2">Socket Type: {keyFeatures?.sockettype}</h1>
           )}
+
           {keyFeatures.tdp && <h1 className="mt-2">TDP: {keyFeatures.tdp}</h1>}
+
           {keyFeatures.ramSlots && (
             <h1 className="mt-2">RAM Slots: {keyFeatures.ramSlots}</h1>
           )}
@@ -67,10 +73,12 @@ const ProductDetails = ({ data }) => {
           <h1 className="mt-2">Description: {description}</h1>
         </div>
       </div>
+
       <div className="mt-3">
         <h1 className="text-center font-semibold text-2xl">
           Reviews: {reviews?.length}
         </h1>
+
         {reviews?.map((review, i) => (
           <div key={i} className="mt-3 font-semibold">
             <h1>

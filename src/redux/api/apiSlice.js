@@ -1,11 +1,11 @@
-import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
-
+import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const apiSlice = createApi({
-    reducerPath: 'apiSlice',
-    baseQuery: fetchBaseQuery({ baseUrl: 'https://building-pc.vercel.app/api/v1' }),
-    endpoints: () => ({}),
-})
+  reducerPath: "apiSlice",
+  baseQuery: fetchBaseQuery({
+    baseUrl: "https://building-pc.vercel.app/api/v1",
+  }),
+  endpoints: () => ({}),
+});
 
-
-export const { useGetPokemonByNameQuery } = apiSlice
+export const { useGetPokemonByNameQuery } = apiSlice;
