@@ -97,7 +97,7 @@ export default ProductDetails;
 
 export const getStaticPaths = async () => {
   const res = await fetch(
-    "https://building-pc.vercel.app/api/v1/product/products"
+    `${process.env.API_URL}product/products`
   );
   const products = await res.json();
 
@@ -111,7 +111,7 @@ export const getStaticProps = async (contex) => {
   const { params } = contex;
 
   const res = await fetch(
-    `https://building-pc.vercel.app/api/v1/product/single-product/${params.productId}`
+    `${process.env.API_URL}product/single-product/${params.productId}`
   );
   const data = await res.json();
 

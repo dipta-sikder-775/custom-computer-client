@@ -62,7 +62,7 @@ export default PcBuild;
 
 export const getServerSideProps = async () => {
 
-    const res = await fetch('https://building-pc.vercel.app/api/v1/category/categorys')
+    const res = await fetch(`${process.env.API_URL}category/categorys`)
     const data = await res.json()
     return {
         props: {

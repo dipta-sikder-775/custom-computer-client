@@ -69,7 +69,7 @@ export const getServerSideProps = async (contex) => {
   const { params } = contex;
 
   const res = await fetch(
-    `https://building-pc.vercel.app/api/v1/product/category-products/${params.categoryId}`
+    `${process.env.API_URL}product/category-products/${params.categoryId}`
   );
   const data = await res.json();
   console.log();

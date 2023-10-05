@@ -29,12 +29,12 @@ Home.getLayout = function getLayout(page) {
 
 export const getStaticProps = async () => {
   const res = await fetch(
-    "https://building-pc.vercel.app/api/v1/product/random-products"
+    `${process.env.API_URL}product/random-products`
   );
   const data = await res.json();
 
   const response = await fetch(
-    "https://building-pc.vercel.app/api/v1/category/categorys"
+    `${process.env.API_URL}category/categorys`
   );
   const category = await response.json();
   
