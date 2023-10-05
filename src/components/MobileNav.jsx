@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { AiOutlineMenu } from "react-icons/ai";
 import { ImCross } from "react-icons/im";
 import { useState } from "react";
@@ -31,8 +32,8 @@ const MobileNavbar = () => {
       <div className="md:hidden flex justify-between mx-5 py-2 transition duration-700">
         <Link href={"/"}>
           <img
-            className="w-24"
-            src="https://i.ibb.co/xfZfGns/pc-logo.png"
+            className="w-10"
+            src="/logo.jpg"
             alt=""
           />
         </Link>

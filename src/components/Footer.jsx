@@ -6,13 +6,13 @@ const Footer = () => {
     <footer className="my-5">
       <hr />
 
-      <h1 className="text-center font-semibold text-3xl">Building PC</h1>
+      <h1 className="text-center font-semibold text-3xl">Custom PC Building</h1>
 
       <div className="flex justify-center items-center mt-3">
-        <BsFacebook className="mr-3" size={24} />
-        <AiFillTwitterCircle className="mr-3" size={24} />
-        <BsInstagram className="mr-3" size={24} />
-        <AiFillLinkedin className="mr-3" size={24} />
+        <BsFacebook className="mr-3 hover:text-[#379AE0]" size={24} />
+        <BsInstagram className="mr-3 hover:text-[#379AE0]" size={24} />
+        <AiFillTwitterCircle className="mr-3 hover:text-[#379AE0]" size={24} />
+        <AiFillLinkedin className="mr-3 hover:text-[#379AE0]" size={24} />
       </div>
 
       <h1 className="text-center mt-2">

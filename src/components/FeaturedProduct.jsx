@@ -7,7 +7,7 @@ const FeaturedProduct = ({ data }) => {
 
   return (
     <div>
-      <h1 className="text-center font-bold text-3xl my-5 md:my-10 text-[#4361ee]">
+      <h1 className="text-center font-bold text-3xl my-5 md:my-10 text-[#379ae0]">
         Featured Product
       </h1>
       

@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Button from '@/components/Button';
 import RootLayout from '@/components/RootLayout';
 import { useGetCategoryQuery } from '@/redux/category/categoryApi';
@@ -53,7 +54,7 @@ const PcBuild = ({ data }) => {
 
                 </div>)
             }
-            <button onClick={handleSubmit} className={`${buttonState ? "bg-[#4361ee] hover:bg-gray-600" : " bg-gray-600"}  px-10 ml-3 mt-5 py-2 rounded-md text-white mr-3  duration-300`} disabled={!buttonState}>Complete Build</button>
+            <button onClick={handleSubmit} className={`${buttonState ? "bg-[#379ae0] hover:bg-gray-600" : " bg-gray-600"}  px-10 ml-3 mt-5 py-2 rounded-md text-white mr-3  duration-300`} disabled={!buttonState}>Complete Build</button>
         </div>
     );
 };

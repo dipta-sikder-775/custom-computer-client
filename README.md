@@ -1,6 +1,8 @@
 ### Links:
 
-- Live Link: <a href="https://custom-computer-client.vercel.app/" target="_blank">https://custom-computer-client.vercel.app/</a>
+- Live Link: <a href="https://custom-computer-client.vercel.app/" target="_blank">https://custom-computer-client.vercel.app</a>
+<br/>
+- Github Repo Link: <a href="https://github.com/dipta-sikder-775/custom-computer-client" target="_blank">https://github.com/dipta-sikder-775/custom-computer-client</a>
 
 ### Navbar:
 

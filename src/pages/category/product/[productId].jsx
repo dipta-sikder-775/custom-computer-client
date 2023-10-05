@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import RootLayout from "@/components/RootLayout";
 import { useGetSingleProductQuery } from "@/redux/product/productApi";
 import Head from "next/head";

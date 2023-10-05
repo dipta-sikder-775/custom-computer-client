@@ -23,15 +23,16 @@ const Navbar = () => {
   return (
     <div className="bg-gray-100 ">
       <div className="hidden md:block">
-        <div className="flex justify-between items-center max-w-7xl mx-auto">
-          <div>
+        <div className="flex justify-between items-center max-w-7xl mx-auto px-3">
+          <Link href={"/"}>
             <Image
-              src="https://i.ibb.co/xfZfGns/pc-logo.png"
-              width={150}
-              height={50}
+              // src="https://i.ibb.co/xfZfGns/pc-logo.png"
+              src="/logo.jpg"
+              width={100}
+              height={100}
               alt=""
             />
-          </div>
+          </Link>
 
           <div>
             <ul className="flex items-center">
@@ -55,7 +56,7 @@ const Navbar = () => {
                             key={category._id}
                           >
                             <li
-                              className={`px-3 cursor-pointer hover:text-[#4361ee] ${
+                              className={`px-3 cursor-pointer hover:text-[#379ae0] ${
                                 i !== 0 && "mt-2 border-t"
                               } `}
                             >
