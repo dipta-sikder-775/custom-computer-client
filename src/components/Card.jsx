@@ -32,7 +32,7 @@ const Card = ({ product }) => {
               <AiFillStar className="w-4 h-4 text-yellow-500" />
             </p>
 
-            <p className="px-2 py-1 text-xs rounded-full bg-[#379ae0] text-white inline-block">
+            <p className="px-2 py-1 text-xs rounded-full bg-[#52619a] text-white inline-block">
               {" "}
               {product.category}
             </p>
@@ -41,7 +41,7 @@ const Card = ({ product }) => {
 
         <button
           type="button"
-          className="bg-[#379ae0] mt-3 px-3 py-2 rounded-md text-white mr-3 hover:bg-gray-600 duration-300 w-full"
+          className="bg-[#52619a] mt-3 px-3 py-2 rounded-md text-white mr-3 hover:bg-gray-600 duration-300 w-full"
         >
           View Product
         </button>

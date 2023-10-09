@@ -43,7 +43,7 @@ const BuildProductDetails = ({ data }) => {
           </div>
 
           <button
-            className="mt-3 bg-[#379ae0] px-3 py-2 rounded-md text-white mr-3 hover:bg-gray-600 duration-300"
+            className="mt-3 bg-[#52619a] px-3 py-2 rounded-md text-white mr-3 hover:bg-gray-600 duration-300"
             onClick={() => handleProduct(product)}
           >
             Select

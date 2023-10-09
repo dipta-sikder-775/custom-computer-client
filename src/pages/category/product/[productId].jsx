@@ -30,48 +30,56 @@ const ProductDetails = ({ data }) => {
       <Head>
         <title>Build PC</title>
       </Head>
-      <img className="w-full md:h-[500px]" src={image} alt="" />
-      <div className="flex flex-col md:flex-row justify-between">
-        <div className="font-semibold mt-3">
-          <h1 className="mt-2">Name: {productName}</h1>
-          <h1 className="mt-2">Category: {category}</h1>
-          <h1 className="mt-2">Price: $ {price}</h1>
 
-          <h1 className="mt-2">
-            Status:{" "}
-            <span
-              className={`${
-                status === "In Stock" ? "text-[#1fc600]" : "text-red-500"
-              }`}
-            >
-              {status}
-            </span>
-          </h1>
-
-          <h1 className="mt-2">Rating: {rating}</h1>
-          <h1 className="mt-2">Indivisual Rating: {indivisualRating}</h1>
+      <div className="rounded-lg shadow-xl p-3 border-gray-300">
+        <div className="mx-auto">
+          <img className="w-full md:h-[400px] rounded" src={image} alt="" />
         </div>
 
-        <div className="font-semibold mt-3">
-          <h1 className="mt-2">Brand: {keyFeatures?.brand}</h1>
-          <h1 className="mt-2">Model: {keyFeatures?.model}</h1>
-          <h1 className="mt-2">Specification: {keyFeatures.specification}</h1>
+        <div className="flex flex-col md:flex-row justify-between">
+          <div className="font-semibold mt-3">
+            <h1 className="mt-2">Name: {productName}</h1>
+            <h1 className="mt-2">Category: {category}</h1>
+            <h1 className="mt-2">Price: $ {price}</h1>
 
-          {keyFeatures?.sockettype && (
-            <h1 className="mt-2">Socket Type: {keyFeatures?.sockettype}</h1>
-          )}
+            <h1 className="mt-2">
+              Status:{" "}
+              <span
+                className={`${
+                  status === "In Stock" ? "text-[#1fc600]" : "text-red-500"
+                }`}
+              >
+                {status}
+              </span>
+            </h1>
 
-          {keyFeatures.tdp && <h1 className="mt-2">TDP: {keyFeatures.tdp}</h1>}
+            <h1 className="mt-2">Rating: {rating}</h1>
+            <h1 className="mt-2">Indivisual Rating: {indivisualRating}</h1>
+          </div>
 
-          {keyFeatures.ramSlots && (
-            <h1 className="mt-2">RAM Slots: {keyFeatures.ramSlots}</h1>
-          )}
+          <div className="font-semibold mt-3">
+            <h1 className="mt-2">Brand: {keyFeatures?.brand}</h1>
+            <h1 className="mt-2">Model: {keyFeatures?.model}</h1>
+            <h1 className="mt-2">Specification: {keyFeatures.specification}</h1>
 
-          {keyFeatures.type && (
-            <h1 className="mt-2">Type: {keyFeatures.type}</h1>
-          )}
+            {keyFeatures?.sockettype && (
+              <h1 className="mt-2">Socket Type: {keyFeatures?.sockettype}</h1>
+            )}
 
-          <h1 className="mt-2">Description: {description}</h1>
+            {keyFeatures.tdp && (
+              <h1 className="mt-2">TDP: {keyFeatures.tdp}</h1>
+            )}
+
+            {keyFeatures.ramSlots && (
+              <h1 className="mt-2">RAM Slots: {keyFeatures.ramSlots}</h1>
+            )}
+
+            {keyFeatures.type && (
+              <h1 className="mt-2">Type: {keyFeatures.type}</h1>
+            )}
+
+            <h1 className="mt-2">Description: {description}</h1>
+          </div>
         </div>
       </div>
 
@@ -80,15 +88,20 @@ const ProductDetails = ({ data }) => {
           Reviews: {reviews?.length}
         </h1>
 
-        {reviews?.map((review, i) => (
-          <div key={i} className="mt-3 font-semibold">
-            <h1>
-              <span className="font-bold">{i + 1}. </span>Rating:{" "}
-              {review.rating}
-            </h1>
-            <h1>Comment: {review.comment}</h1>
-          </div>
-        ))}
+        <div className="flex gap-4 justify-center mt-3 flex-wrap">
+          {reviews?.map((review, i) => (
+            <div
+              key={i}
+              className="font-semibold p-4 border-gray-300 border shadow-xl max-w-sm rounded-lg"
+            >
+              <h1>
+                <span className="font-bold">{i + 1}. </span>Rating:{" "}
+                {review.rating}
+              </h1>
+              <h1>Comment: {review.comment}</h1>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
@@ -97,9 +110,7 @@ const ProductDetails = ({ data }) => {
 export default ProductDetails;
 
 export const getStaticPaths = async () => {
-  const res = await fetch(
-    `${process.env.API_URL}product/products`
-  );
+  const res = await fetch(`${process.env.API_URL}product/products`);
   const products = await res.json();
 
   const paths = products?.data.map((product) => ({

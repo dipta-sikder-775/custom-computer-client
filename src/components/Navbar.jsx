@@ -56,7 +56,7 @@ const Navbar = () => {
                             key={category._id}
                           >
                             <li
-                              className={`px-3 cursor-pointer hover:text-[#379ae0] ${
+                              className={`px-3 cursor-pointer hover:text-[#52619a] ${
                                 i !== 0 && "mt-2 border-t"
                               } `}
                             >
